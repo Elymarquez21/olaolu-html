@@ -1,0 +1,165 @@
+/* ===== PÁGINA DE TRABAJO (trabajo.html) ===== */
+
+.page-content {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: var(--spacing-lg) var(--spacing-sm);
+  min-height: 60vh;
+}
+
+.page-hero {
+  margin-bottom: var(--spacing-xl);
+  animation: fadeIn 0.5s ease-out;
+}
+
+.page-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: var(--spacing-sm);
+}
+
+.page-title-slash {
+  color: var(--color-accent);
+  margin-right: 0.25rem;
+}
+
+.page-title-dot {
+  color: var(--color-accent);
+}
+
+.page-subtitle {
+  font-size: 1.2rem;
+  color: var(--color-text-light);
+  max-width: 500px;
+  line-height: 1.5;
+}
+
+/* Grid de trabajos */
+.work-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background-color: var(--color-border);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: var(--spacing-xl);
+  animation: fadeIn 0.5s ease-out 0.1s both;
+}
+
+/* Tarjetas de trabajo */
+.work-card {
+  background-color: var(--color-bg);
+  padding: 1.5rem;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.work-card:not(:last-child) {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.work-card:hover {
+  background-color: #fafafa;
+  transform: translateX(4px);
+}
+
+/* Modo oscuro hover */
+@media (prefers-color-scheme: dark) {
+  .work-card:hover {
+    background-color: #1a1a1a;
+  }
+}
+
+/* Logo de la tarjeta */
+.work-card-logo {
+  min-width: 100px;
+  width: 100px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-border);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.work-card:hover .work-card-logo {
+  background-color: var(--color-bg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.work-logo-text {
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-align: center;
+  line-height: 1.2;
+  padding: 0 0.5rem;
+}
+
+/* Información de la tarjeta */
+.work-card-info {
+  flex: 1;
+}
+
+.work-card-info h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: var(--color-text);
+}
+
+.work-card-info p {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  font-family: monospace;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .page-title {
+    font-size: 2.5rem;
+  }
+  
+  .page-subtitle {
+    font-size: 1rem;
+  }
+  
+  .work-card {
+    padding: 1rem;
+    gap: 1rem;
+  }
+  
+  .work-card-logo {
+    min-width: 80px;
+    width: 80px;
+    height: 50px;
+  }
+  
+  .work-logo-text {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .page-title {
+    font-size: 2rem;
+  }
+  
+  .work-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .work-card-logo {
+    width: 100%;
+    min-width: 100%;
+  }
+}

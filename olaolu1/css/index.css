@@ -1,0 +1,50 @@
+/* ===== PÁGINA PRINCIPAL (index.html) ===== */
+
+.main-content {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: var(--spacing-lg) var(--spacing-sm);
+  min-height: 60vh;
+}
+
+.intro-section {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.intro-heading {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: var(--spacing-lg);
+  letter-spacing: -0.03em;
+}
+
+.intro-text {
+  font-size: 1.125rem;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text-light);
+  max-width: 600px;
+}
+
+.intro-text a {
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid transparent;
+  transition: var(--transition);
+}
+
+.intro-text a:hover {
+  border-bottom-color: var(--color-accent);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .intro-heading {
+    font-size: 2.25rem;
+  }
+
+  .intro-text {
+    font-size: 1rem;
+  }
+}
